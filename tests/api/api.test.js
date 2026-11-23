@@ -74,6 +74,8 @@ describe('Integration Tests: RealWorld REST API (SuperTest)', () => {
         });
 
       expect(res.status).toBe(422);
+      expect(res.body.errors).toBeDefined();
+      expect(res.body.errors).toHaveProperty('email or password', 'is invalid');
     });
 
     test('GET /api/user - Should return current user when authenticated (200)', async () => {
