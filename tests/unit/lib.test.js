@@ -43,6 +43,12 @@ describe('Unit Tests: Helpers & Utilities (lib.js)', () => {
       expect(ok).toBe(false);
     });
 
+    test('should return true and 0 for string "0"', () => {
+      const [val, ok] = lib.validatePositiveInteger('0');
+      expect(ok).toBe(true);
+      expect(val).toBe(0);
+    });
+
     // --- DATA-DRIVEN TESTING (DDT) with test.each ---
     describe('Data-Driven Parameterized Suite (test.each)', () => {
       test.each([

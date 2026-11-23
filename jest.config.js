@@ -16,6 +16,14 @@ module.exports = {
       functions: 80,
       lines: 80,
       statements: 80
+    },
+    // Exercise 3: enforce the same gate on lib.js so aggregate coverage in
+    // auth.js cannot hide the new helper's untested branches.
+    './lib.js': {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
     }
   },
   reporters: [
